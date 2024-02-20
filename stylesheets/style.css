@@ -1,0 +1,99 @@
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+  
+  
+  
+  .disp-flex{
+    display: flex;
+  }
+  .row{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+  }
+  .badge text-bg-primary {
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+    margin-bottom: 20px;
+  
+  }
+  
+  
+  #form-details form{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #form-details form input,
+  #form-details form textarea{
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+  }
+  #form-details form button{
+    background-color: #088178;
+    color: #fff;
+  }
+  
+  #header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 60px;
+    background: #81A094;
+    box-shadow: 0 5px 15px rgba(red, green, blue, alpha);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+  #navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+    font-size: medium;
+  }
+   #navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    transition: 0.3sec ease;
+  } 
+  #navbar li a:hover{
+    color: rgb(7, 229, 229);
+  } 
+  
+  .logo{
+    
+    background-size: cover;
+    height: 19%;
+      width: 70%;
+    /* margin-right: 4%; */
+  }
+  
+  
+  .border-left-primary {
+    border-left: .25rem solid #4e73df!important;
+  }
+  .patient-information{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+
+
+  

@@ -1,0 +1,52 @@
+<%- include('detailLayout/header')%>
+<div class="col-lg-12">
+    <% if (message) { %>
+     <div class="alert alert-dismissible fade show alert- <%= message.type %>" role="alert">
+        <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="close">
+
+        </button>
+        <strong> <%= message.message  %></strong>
+    </div>
+    <% } %>
+    <div class="table-responsive">
+        <% if (patients !='') { %>
+            <table class="table table-striped text-center">
+                <thead>
+                    <tr class="table-dark">
+                        <th>ID</th>
+                        <TH>PatientName</TH>
+                        <th>Address</th>
+                        <th>E-mail</th>
+                        <th>Phone no</th>
+                        <th>appointment Date</th>
+                        <th>appointmentTime</th>
+                        <th>Symptoms</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   <% patients.forEach((row,index) => { %>
+                    <tr>
+                        <td><%= index %></td>
+                        <td><%= row.patientName %></td>
+                        <td><%= row.patientAddress></td>
+                        <td><%= row.patientemail %></td>
+                        <td><%= row.patientPhno %></td>
+                        <td><%= row.appointmentDate %></td>
+                        <td><%= row.appointmentTime %></td>
+                        <td><%= row.patientSymptoms %></td>
+                        <td>
+                            <a href="/edit/<%= row._id %>" class="text-success"> <i class="fas fa-edit fa-lg mx-1"></i></a>
+                            <a href="/delete/<%= row._id %>" class="text-danger"> <i class="fas fa-trash fa-lg mx-1"></i></a>
+                        </td>
+                    </tr>
+                    
+                   <% }) %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <h1 class="text-center text-secondary mt-r"> Npusers found in database</h1>
+            <% } %>
+     
+    </div>
+<%- include('detailLayout/footer')%>
